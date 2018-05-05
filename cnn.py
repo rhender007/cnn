@@ -17,10 +17,9 @@ stop_words = set(stopwords.words('english'))
 punctuation = set(string.punctuation)
 word_tokens = word_tokenize(strng)
 
-filtered_sentence = [w for w in word_tokens if not w in stop_words]
- 
 filtered_sentence = []
- 
+# filtered_sentence = [w for w in word_tokens if not w in stop_words]
+
 for w in word_tokens:
     if w.lower() not in stop_words:
         if w not in punctuation:
